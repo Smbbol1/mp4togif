@@ -451,6 +451,90 @@ body {
 .converter-change {
   margin-top: 8px;
 }
+.converter-drop.has-files {
+  padding: 24px;
+}
+.converter-batch-summary {
+  width: 100%;
+}
+.converter-files {
+  width: 100%;
+  margin: 20px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 9px;
+  list-style: none;
+}
+.converter-file {
+  display: grid;
+  grid-template-columns: 48px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 12px;
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--card);
+  text-align: left;
+}
+.converter-file.is-converting {
+  border-color: color-mix(in oklab, var(--primary) 60%, var(--border));
+}
+.converter-file-icon,
+.converter-file-preview {
+  width: 48px;
+  height: 48px;
+  border-radius: 5px;
+}
+.converter-file-icon {
+  display: grid;
+  place-items: center;
+  background: var(--secondary);
+  color: var(--film);
+}
+.converter-file-preview {
+  object-fit: cover;
+  background: var(--secondary);
+}
+.converter-file-info {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.converter-file-info strong {
+  overflow: hidden;
+  color: var(--foreground);
+  font: 600 12px/1.4 var(--font-body);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.converter-file-info > span,
+.converter-file-status {
+  color: var(--muted-foreground);
+  font: 10px/1.4 var(--font-code);
+}
+.converter-file-action {
+  display: flex;
+  justify-content: flex-end;
+}
+.converter-file-status {
+  white-space: nowrap;
+}
+.converter-download {
+  min-height: 34px;
+  padding-inline: 12px;
+  font-size: 11px;
+}
+.converter-file-progress {
+  width: 100%;
+  height: 5px;
+  margin-top: 2px;
+  accent-color: var(--primary);
+}
+.converter-file-info .converter-file-error {
+  color: var(--destructive);
+  overflow-wrap: anywhere;
+}
 
 @media (max-width: 540px) {
   .converter-bar,
@@ -479,6 +563,27 @@ body {
   }
   .converter-drop {
     min-height: 276px;
+  }
+  .converter-drop.has-files {
+    padding: 20px 10px;
+  }
+  .converter-file {
+    grid-template-columns: 40px minmax(0, 1fr);
+    gap: 9px;
+  }
+  .converter-file-icon,
+  .converter-file-preview {
+    grid-row: 1 / span 2;
+    width: 40px;
+    height: 40px;
+  }
+  .converter-file-action {
+    grid-column: 2;
+    justify-content: flex-start;
+  }
+  .converter-meta {
+    max-width: 270px;
+    line-height: 1.6;
   }
   .converter-steps {
     gap: 7px;

@@ -13,8 +13,8 @@ describe("MP4 conversion limits", () => {
     expect(validateFile({ ...file, size: 500_000_001 })).toBeTruthy();
   });
 
-  it("accepts at most 45 seconds", () => {
-    expect(validateDuration(45)).toBeUndefined();
-    expect(validateDuration(45.01)).toBeTruthy();
+  it("accepts at most 55 seconds", () => {
+    expect(validateDuration(55)).toBeUndefined();
+    expect(validateDuration(55.01)).toBeTruthy();
   });
 });
