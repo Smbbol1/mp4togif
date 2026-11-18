@@ -7,14 +7,14 @@ describe("MP4 conversion limits", () => {
     expect(validateFile({ name: "clip.mov", type: "video/quicktime", size: 1 })).toBeTruthy();
   });
 
-  it("accepts at most 100 MB", () => {
+  it("accepts at most 500 MB", () => {
     const file = { name: "clip.mp4", type: "video/mp4" };
-    expect(validateFile({ ...file, size: 100_000_000 })).toBeUndefined();
-    expect(validateFile({ ...file, size: 100_000_001 })).toBeTruthy();
+    expect(validateFile({ ...file, size: 500_000_000 })).toBeUndefined();
+    expect(validateFile({ ...file, size: 500_000_001 })).toBeTruthy();
   });
 
-  it("accepts at most 30 seconds", () => {
-    expect(validateDuration(30)).toBeUndefined();
-    expect(validateDuration(30.01)).toBeTruthy();
+  it("accepts at most 45 seconds", () => {
+    expect(validateDuration(45)).toBeUndefined();
+    expect(validateDuration(45.01)).toBeTruthy();
   });
 });

@@ -1,5 +1,5 @@
-export const MAX_FILE_MB = 100;
-export const MAX_DURATION_SECONDS = 30;
+export const MAX_FILE_MB = 500;
+export const MAX_DURATION_SECONDS = 45;
 const FRAME_SECONDS = 0.1;
 const MAX_EDGE = 480;
 
