@@ -1,14 +1,18 @@
-# Welcome to your Lovable project
+# Mp4togif
+
+Quiero crear un convertidor de mp4 a gif que tenga una opción Para subir el archivo mp4  Y realizar la conversión y entregarme Otra opción para descargar el gil
 
 This project was built with [Lovable](https://lovable.dev).
 
+**Live app**: https://mp4togif.lovable.app
+
 ## Build with Lovable
 
-Open your project in the [Lovable editor](https://lovable.dev) and keep building.
+Continue developing this project in the [Lovable editor](https://lovable.dev/projects/5bf720e1-ba79-45e5-a91d-680369bbc7d1).
 
 - **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: connect the project to GitHub and every change made in Lovable is committed straight to your repository.
-- **Full ownership**: this code is yours. Push to your repository and your changes sync back into Lovable, ready for your next prompt.
+- **Stay in sync**: every change made in Lovable is committed straight to this repository.
+- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
 
 ## Development
 
@@ -20,10 +24,3 @@ cd <repository-name>
 npm i
 npm run dev
 ```
-
-## Built with
-
-- TanStack Start
-- TypeScript
-- React
-- Tailwind CSS
